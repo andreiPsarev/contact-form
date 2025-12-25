@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <form class="contact-form" novalidate>
+        <h1>Contact Us</h1>
+
+        <div class="row two-cols">
+          <div class="field">
+            <label>First Name *</label>
+            <input type="text" required />
+            <p class="error hide">This Field is required</p>
+          </div>
+
+          <div class="field">
+            <label>Last Name *</label>
+            <input type="text" required />
+            <p class="error hide">This Field is required</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Email Address *</label>
+          <input type="email" required />
+          <p class="error hide">This Field is required</p>
+        </div>
+
+        <div class="field">
+          <label>Query Type *</label>
+          <div class="row two-cols">
+            <label class="radio-box">
+              <input type="radio" name="query" required />
+              General Enquiry
+            </label>
+
+            <label class="radio-box">
+              <input type="radio" name="query" />
+              Support Request
+            </label>
+          </div>
+          <p class="error hide">Please select a query type</p>
+        </div>
+
+        <div class="field">
+          <label>Message *</label>
+          <textarea rows="4"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="checkbox">
+            <input type="checkbox" required />
+            I consent to being contacted by the team *
+          </label>
+<p class="error hide">You must give consent</p>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

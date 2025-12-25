@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('./assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('./assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 200 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    padding-bottom: 20px;
+}
+
+body {
+    background-color: hsl(148, 38%, 91%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(187, 24%, 22%);
+    font-family: 'Karla', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+}
+
+.row {
+    display: grid;
+    gap: 1rem;
+}
+
+.two-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    margin-bottom: 1rem;
+    width: 100%;
+
+}
+
+.radio-box:hover {
+    background-color: hsl(148, 38%, 91%);
+    outline: 1px solid hsl(169, 82%, 27%);
+
+}
+
+.radio-box:focus-within {
+    outline: 2px solid hsl(169, 82%, 27%);
+    border-radius: 8px;
+    background-color: hsl(148, 38%, 91%);
+}
+
+
+input:hover {
+    background-color: hsl(148, 38%, 91%);
+    outline: 1px solid hsl(169, 82%, 27%);
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid hsl(169, 82%, 27%);
+    background-color: hsl(148, 38%, 91%);
+}
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="radio"]:focus {
+    accent-color: hsl(169, 82%, 27%);
+    border: none;
+}
+
+.radio-box:focus-within {
+    background-color: hsl(148, 38%, 91%);
+    outline: 2px solid hsl(169, 82%, 27%);
+}
+
+input[type="radio"] {
+    outline: none;
+}
+
+
+
+
+input,
+textarea {
+    padding: .75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.radio-box {
+    border: 1px solid #ccc;
+    padding: .75rem;
+    border-radius: 8px;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    width: auto;
+}
+
+button {
+    margin-top: 1.5rem;
+    padding: .9rem;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(169, 82%, 27%);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover,
+button:focus {
+    background-color: hsl(168, 81%, 16%);
+    border: none;
+}
+
+
+
+
+.invalid {
+    border: 2px solid red;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.hide {
+    display: none;
+}
+
+.radio-box input.invalid+span,
+.radio-box input.invalid {
+    outline: 2px solid red;
+}
+
+
+
+@media (max-width: 768px) {
+    .row.two-cols {
+        display: flex;
+        gap: 20px;
+    }
+
+    .field {
+        flex: 1;
+    }
+
+    .row.two-cols {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .field {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .contact-form {
+        margin: 0 20px;
+    }
+
+}
